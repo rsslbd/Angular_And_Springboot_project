@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+    <a class="navbar-brand px-4" routerLink="/home"><i class="fa-solid fa-house"> B-Solusion</i></a>
+    <div class="side-nav-button p-2 me-3 bg-white" style="border-radius: 4px;" (click)="SideNavToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+           
+            
+        </ul>
+    </div>
+    <form class="d-flex me-5">
+        <input class="formControl me-2 rounded" type="search" placeholder="search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    <div class="profile-logo dropstart">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">Russel Pathan</button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" routerLink="/signup">Sign Up</a></li>
+            <li><a class="dropdown-item" routerLink="/signin">Sign In</a></li>
+            <li><a class="dropdown-item" href="">Profile</a></li>
+            <li><button class="dropdown-item" (click)="logOut()" >Log Out</button></li>
+
+        </ul>
+    </div>
+</nav>

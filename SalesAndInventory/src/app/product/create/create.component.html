@@ -1,0 +1,104 @@
+<div class="content-wrapper">
+    <div class="container-fluid  rounded pb-2">
+        <div class="card-body">
+            <h5 class="card-title">Add New Product</h5>
+            <a routerLink="/home/list" class="btn btn-primary">Back</a>
+
+            <!-- Multi Columns Form -->
+            <form class="row g-3" [formGroup]="form1" (ngSubmit)="submit()">
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="product_name">
+                    <div *ngIf="f['product_name'].touched && f['product_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['product_name'].errors && f['product_name'].errors['required']">Title is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Product Catagory</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="catagory">
+                    <div *ngIf="f['catagory'].touched && f['catagory'].invalid"
+                        class="alert alert-danger">
+                        <div *ngIf="f['catagory'].errors && f['catagory'].errors['required']">Title is
+                            required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Product Sub-Catagory</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName=" sub_catagory">
+                    <div *ngIf="f[' sub_catagory'].touched && f[' sub_catagory'].invalid"
+                        class="alert alert-danger">
+                        <div *ngIf="f[' sub_catagory'].errors && f[' sub_catagory'].errors['required']">
+                            Title is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label"> Brand Name</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="brand_name">
+                    <div *ngIf="f['brand_name'].touched && f['brand_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['brand_name'].errors && f['brand_name'].errors['required']">Title is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputPassword5" class="form-label">Qty</label>
+                    <input type="text" class="form-control" id="inputPassword5" formControlName="qty">
+                    <div *ngIf="f['qty'].touched && f['qty'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['qty'].errors && f['qty'].errors['required']">Title is required.</div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4">
+                    <label for="unit" class="form-label">Unit</label>
+
+                    <select class="form-control" id="unit" formControlName="unit">
+                        <option value="kg">kg</option>
+                        <option value="m">m</option>
+                        <option value="km">km</option>
+                        <option value="lb">lb</option>
+                        <option value="piece">piece</option>
+                        <option value="pieces">pieces</option>
+                    </select>
+                    <div *ngIf="f['unit'].touched && f['unit'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['unit'].errors && f['unit'].errors['required']">Unit is required.</div> 
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <label for="inputAddress2" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="" formControlName="purchase_price">
+                    <div *ngIf="f['purchase_price'].touched && f['purchase_price'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['purchase_price'].errors && f['purchase_price'].errors['required']">Title is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputCity" class="form-label">SKU</label>
+                    <input type="text" class="form-control" id="inputCity" formControlName="sku">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputZip" class="form-label">Date</label>
+                    <input type="datetime-local" class="form-control" id="inputZip" formControlName="date">
+                    <div *ngIf="f['date'].touched && f['date'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['date'].errors && f['date'].errors['required']">Title is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success" [disabled]="!form1.valid">Submit</button>&nbsp;
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

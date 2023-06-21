@@ -1,0 +1,10 @@
+<div class="container-fluid g-0">
+    <app-header class="fixed" (sideNavToggled)="sideNavStatus=$event;"></app-header>
+    <main>
+        <app-side-nav class="black-border fixed" [sideNavStatus]="sideNavStatus"
+            [ngClass]="{'app-side-nav-open':sideNavStatus}"></app-side-nav>
+        <div class="display-area p-4">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,155 @@
+<div class="content-wrapper">
+    <div class="container-fluid rounded pb-2">
+        <div class="card-body">
+            <h5 class="card-title">Sale Views</h5>
+            <a routerLink="/home/sales-list" class="btn btn-primary">Back</a>
+
+            <!-- Multi Columns Form -->
+            <form class="row g-3" [formGroup]="form1" >
+                <div class="col-md-4">
+                    <label for="customer_name" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="customer_name" formControlName="customer_name">
+                    <div *ngIf="f['customer_name'].touched && f['customer_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['customer_name'].errors && f['customer_name'].errors['required']">Catagory is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Catagory</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="catagory">
+                    <div *ngIf="f['catagory'].touched && f['catagory'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['catagory'].errors && f['catagory'].errors['required']">Catagory is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Sub-Catagory</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="sub_catagory">
+                    <div *ngIf="f['sub_catagory'].touched && f['sub_catagory'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['sub_catagory'].errors && f['sub_catagory'].errors['required']">Sub-Catagory is required.</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="product_name">
+                    <div *ngIf="f['product_name'].touched && f['product_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['product_name'].errors && f['product_name'].errors['required']">Product Name is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Brand Name</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="brand_name">
+                    <div *ngIf="f['brand_name'].touched && f['brand_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['brand_name'].errors && f['brand_name'].errors['required']">Brand Name is required.</div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">SKU</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="brand_name">
+                    <div *ngIf="f['sku'].touched && f['sku'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['sku'].errors && f['sku'].errors['required']">SKU is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputName5" class="form-label">Supplier Name</label>
+                    <input type="text" class="form-control" id="inputName5" formControlName="supplier_name">
+                    <div *ngIf="f['supplier_name'].touched && f['supplier_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['supplier_name'].errors && f['supplier_name'].errors['required']">Supplier Name is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="status" class="form-label">Payment Status</label>
+
+                    <select class="form-control" id="status" formControlName="status">
+                        <option value="recieved">Recieved</option>
+                        <option value="ordered">Ordered</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                    <div *ngIf="f['status'].touched && f['status'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['status'].errors && f['status'].errors['required']">Unit is required.</div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputPassword5" class="form-label">Qty</label>
+                    <input type="text" class="form-control" id="inputPassword5" formControlName="qty">
+                    <div *ngIf="f['qty'].touched && f['qty'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['qty'].errors && f['qty'].errors['required']">Qty is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="unit" class="form-label">Unit</label>
+
+                    <select class="form-control" id="unit" formControlName="unit">
+                        <option value="kg">kg</option>
+                        <option value="m">m</option>
+                        <option value="km">km</option>
+                        <option value="lb">lb</option>
+                        <option value="pc">pc</option>
+                        <option value="pcs">pcs</option>
+                    </select>
+                    <div *ngIf="f['unit'].touched && f['unit'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['unit'].errors && f['unit'].errors['required']">Unit is required.</div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="selling_price" class="form-label">Selling Price/Unit</label>
+                    <input type="text" class="form-control" id="selling_price" placeholder="0000" formControlName="selling_price">
+                    <div *ngIf="f['selling_price'].touched && f['selling_price'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['selling_price'].errors && f['selling_price'].errors['required']">Selling Price is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="tax_percentage" class="form-label">Tax</label>
+                    <input type="text" class="form-control" id="tax_percentage" placeholder="0000" formControlName="tax_percentage">
+                    <div *ngIf="f['tax_percentage'].touched && f['tax_percentage'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['tax_percentage'].errors && f['tax_percentage'].errors['required']">Tax is required.</div>
+                    </div>
+                </div><div class="col-md-4">
+                    <label for="discount_percentage" class="form-label">Discount</label>
+                    <input type="text" class="form-control" id="discount_percentage" placeholder="0000" formControlName="discount_percentage">
+                    <div *ngIf="f['discount_percentage'].touched && f['discount_percentage'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['discount_percentage'].errors && f['discount_percentage'].errors['required']">Discount is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="total" class="form-label">Grand Total</label>
+                    <input type="text" class="form-control" id="total" placeholder="0000" formControlName="total">
+                    <div *ngIf="f['total'].touched && f['total'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['total'].errors && f['total'].errors['required']">total Price is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputCity" class="form-label">Paid</label>
+                    <input type="text" class="form-control" id="inputCity" formControlName="paid">
+                    <div *ngIf="f['paid'].touched && f['paid'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['paid'].errors && f['paid'].errors['required']">Paid is required.</div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4">
+                    <label for="payment_status" class="form-label">Payment Status</label>
+
+                    <select class="form-control" id="payment_status" formControlName="payment_status">
+                        <option value="paid">Paid</option>
+                        <option value="partial">Partial</option>
+                        <option value="unpaid">Unpaid</option>
+                    </select>
+                    <div *ngIf="f['payment_status'].touched && f['payment_status'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['payment_status'].errors && f['payment_status'].errors['required']">Payment Status is required.</div> 
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputZip" class="form-label">Date</label>
+                    <input type="datetime-local" class="form-control" id="inputZip" formControlName="date">
+                    <div *ngIf="f['date'].touched && f['date'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['date'].errors && f['date'].errors['required']">Date is required.</div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<button (click)="printThisPage()">Invoice</button>

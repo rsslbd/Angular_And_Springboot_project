@@ -1,0 +1,181 @@
+<div class="side-nav-content">
+    <ul class="nav-list" [ngClass]="{'nav-list-open':sideNavStatus}">
+        <!-- <li class="nav-list-item border-white" *ngFor="let a of list"> -->
+            <li class="nav-list-item border-white">
+                <!-- <i class="{{a.icon}} border-white"></i> -->
+              
+                <i class="border-white fa fa-dashboard"></i>&nbsp;
+                <button  routerlink="/home/dashboard"  >
+                Dashboard
+                </button>
+    
+                   
+                
+              
+            </li>
+            <li class="nav-list-item border-white">
+                <!-- <i class="{{a.icon}} border-white"></i> -->
+                <i class="border-white  fas fa-list-alt"></i><span class="">&nbsp;
+    
+                    <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Product Catagory
+                    </a>
+    
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="dropdown-item" routerLink="/home/catagory-list">Catagory List</a></li>
+                        <li><a class="dropdown-item" routerLink="/home/catagory-create">Add Catagory</a></li>
+            
+                    </ul>
+                </span>
+            </li>
+            <li class="nav-list-item border-white">
+                <!-- <i class="{{a.icon}} border-white"></i> -->
+                <i class="border-white fa fa-list"></i><span class="">&nbsp;
+    
+                    <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                       Sub-Catagory Product 
+                    </a>
+    
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="dropdown-item" routerLink="/home/sub-catagory-list">Sub-Catagory List</a></li>
+                        <li><a class="dropdown-item" routerLink="/home/sub-catagory-create">Add Sub-Catagory</a></li>
+            
+                    </ul>
+                </span>
+            </li>
+            <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fa fa-product-hunt"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Product
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="/home/list">Product List</a></li>
+                    <li><a class="dropdown-item" routerLink="/home/create">Add Product</a></li>
+        
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fa fa-shopping-cart"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Purchase
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="/home/purchase-list">Purchase List</a></li>
+                    <li><a class="dropdown-item" routerLink="/home/purchase-create">Purchase Order</a></li>
+
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fa-solid fa-file"></i><span class=""> &nbsp;&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Report
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="customer-report">Customer</a></li>
+                    <li><a class="dropdown-item" routerLink="inventory-report">Inventory</a></li>
+                    <li><a class="dropdown-item" routerLink="invoice-report">Invoice</a>
+                    </li>
+                    <li><a class="dropdown-item" routerLink="sales-report">Sales</a>
+                    </li>
+                    <li><a class="dropdown-item" routerLink="purchase-report">Purchase</a></li>
+                    <li><a class="dropdown-item" routerLink="supplier-report">Supplier</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fa-brands fa-salesforce"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Sales
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="/home/sales-list">Sales List</a>
+                    </li>
+                    <li><a class="dropdown-item" routerLink="/home/sales-create">Sales</a>
+                    </li>
+
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fas fa-user-tag"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    User Managemuent
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="user-list">User List</a></li>
+                    <li><a class="dropdown-item" routerLink="user-form">Add User</a></li>
+
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white bg-dark">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fas fa-user"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                   Customer
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="/home/customer-list">Customer List</a></li>
+                    <li><a class="dropdown-item" routerLink="/home/customer-create">Customer Product</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fas fa-industry"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                   Supplier
+                </a>
+
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" routerLink="/home/supplier-list">Supplier List</a></li>
+                    <li><a class="dropdown-item" routerLink="/home/supplier-create">Add Supplier</a></li>
+                </ul>
+            </span>
+        </li>
+
+        <li class="nav-list-item border-white">
+            <!-- <i class="{{a.icon}} border-white"></i> -->
+            <i class="border-white fa fa-info-circle"></i><span class="">&nbsp;
+
+                <a class="btn btn-dark" routerlink=""  
+                    aria-expanded="false">
+                   About
+                </a>
+
+               
+            </span>
+        </li>
+
+    </ul>
+
+</div>

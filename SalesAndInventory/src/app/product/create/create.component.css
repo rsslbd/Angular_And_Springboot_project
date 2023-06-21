@@ -1,0 +1,4 @@
+app-create {
+    width: calc(100vh-250px);
+    border-width: 3px;
+}

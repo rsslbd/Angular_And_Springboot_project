@@ -1,0 +1,42 @@
+<div>
+    <a class="btn btn-primary" routerLink="/home/sub-catagory-create">Add Sub-Catagory</a>
+</div>
+<div class="card top-selling overflow-auto">
+    <div class="content-wrapper">
+        <div class=" col-md-12 container-fluid rounded" style="padding: 20px;">
+
+            <table class=" table table-striped table-reponsive-sm">
+                <thead>
+                    <tr>
+                        <th>Catagory Id</th>
+                        <th>Catagory Name</th>
+                        <th>Sub-Catagory Name</th>
+
+                        <th>Descripetion</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let v of list">
+                        <td>{{v.sub_catagory_id}}</td>
+                        <td>{{v.catagory_name}}</td>
+                        <td>{{v.sub_catagory_name}}</td>
+                         <td>{{v.description}}</td>
+                        
+                        <td style="padding-left: 5px;">
+                            <a href="#" [routerLink]="['/home/', v.sub_catagory_id, 'sub-catagory-view']" class="btn btn-info">View
+                            </a> &nbsp;
+                            <a href="#" [routerLink]="['/home/', v.sub_catagory_id, 'sub-catagory-edit']"
+                                class="btn btn-primary">Edit</a> &nbsp;
+                            <button type="button" (click)="deletePost(v.sub_catagory_id)"
+                                class="btn btn-danger">Delete</button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

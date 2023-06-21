@@ -1,0 +1,30 @@
+<div class="content-wrapper">
+    <div class="container-fluid rounded pb-2">
+        <div class="card-body">
+            <h5 class="card-title">View Catagory</h5>
+            <a routerLink="/home/catagory-list" class="btn btn-primary">Back</a>
+
+            <!-- Multi Columns Form -->
+            <form class="row g-3" [formGroup]="form1">
+                <div class="col-md-4">
+                    <label for="catagory_name" class="form-label">Catagory Name</label>
+                    <input type="text" class="form-control" id="catagory_name" formControlName="catagory_name">
+                    <div *ngIf="f['catagory_name'].touched && f['catagory_name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['catagory_name'].errors && f['catagory_name'].errors['required']">Catagory is required.
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="4" formControlName="description"></textarea>
+                    <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required.
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+</div>
